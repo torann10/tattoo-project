@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tattoo-2024": {
+      "hosting": {
+        "tattoo-project": [
+          "tattoo-2024"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tattoo-2024"
+  }
+}

@@ -37,6 +37,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -97,10 +98,28 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "tattoo-project:build:production",
+              "serveTarget": "tattoo-project:serve:production"
+            },
+            "development": {
+              "buildTarget": "tattoo-project:build:development",
+              "serveTarget": "tattoo-project:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

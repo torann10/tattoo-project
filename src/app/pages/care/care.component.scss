@@ -1,0 +1,29 @@
+div {
+    display: inline-block;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.div-card {
+    padding: 50px;
+    background-color: lightgray;
+}
+
+.main_component {
+    height: 100vh;
+}
+
+mat-card-header{
+    text-align: center;
+    justify-content: center;
+}
+
+mat-card-content {
+    justify-content: left;
+    text-align: left;
+}
+
+li {
+    padding: 5px;
+}
