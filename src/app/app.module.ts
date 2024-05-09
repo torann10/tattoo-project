@@ -35,12 +35,11 @@ import { AngularFireModule } from '@angular/fire/compat';
     MatIconModule,
     FlexLayoutModule,
     MatListModule,
-    AngularFireModule.initializeApp({"projectId":"the-tattoo-2024","appId":"1:738718665131:web:a0987e1418f1c44dddaaee","storageBucket":"the-tattoo-2024.appspot.com","apiKey":"AIzaSyAM7TEkSt6GLa4d_JvwqzNimP0r6yLJlQA","authDomain":"the-tattoo-2024.firebaseapp.com","messagingSenderId":"738718665131","measurementId":"G-XZXCX89454"}),
-    //provideFirebaseApp(() => initializeApp({"projectId":"the-tattoo-2024","appId":"1:738718665131:web:a0987e1418f1c44dddaaee","storageBucket":"the-tattoo-2024.appspot.com","apiKey":"AIzaSyAM7TEkSt6GLa4d_JvwqzNimP0r6yLJlQA","authDomain":"the-tattoo-2024.firebaseapp.com","messagingSenderId":"738718665131","measurementId":"G-XZXCX89454"})),
+    AngularFireModule.initializeApp({"projectId":"tattoo-2024","appId":"1:78813199360:web:bc7efdbfacee998f9cece5","storageBucket":"tattoo-2024.appspot.com","apiKey":"AIzaSyBq684hhJT5PzpgIwkRSPkbkQ3ligl6XoI","authDomain":"tattoo-2024.firebaseapp.com","messagingSenderId":"78813199360","measurementId":"G-PS2PGXHTBZ"}),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
-    provideFirebaseApp(() => initializeApp({"projectId":"tattoo-2024","appId":"1:78813199360:web:bc7efdbfacee998f9cece5","storageBucket":"tattoo-2024.appspot.com","apiKey":"AIzaSyBq684hhJT5PzpgIwkRSPkbkQ3ligl6XoI","authDomain":"tattoo-2024.firebaseapp.com","messagingSenderId":"78813199360","measurementId":"G-PS2PGXHTBZ"}))
+    //provideFirebaseApp(() => initializeApp({"projectId":"tattoo-2024","appId":"1:78813199360:web:bc7efdbfacee998f9cece5","storageBucket":"tattoo-2024.appspot.com","apiKey":"AIzaSyBq684hhJT5PzpgIwkRSPkbkQ3ligl6XoI","authDomain":"tattoo-2024.firebaseapp.com","messagingSenderId":"78813199360","measurementId":"G-PS2PGXHTBZ"}))
   ],
   providers: [
     provideClientHydration(),

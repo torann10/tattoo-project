@@ -10,7 +10,7 @@ import { AuthService } from './shared/services/auth.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
-  title = 'the-tattoo-project';
+  title = 'tattoo-project';
   page = ''
 
   routes: Array<string> = [];
