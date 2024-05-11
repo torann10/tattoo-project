@@ -3,11 +3,11 @@
         <mat-icon>home</mat-icon>
         <span>Main</span>
     </a>
-    <a mat-list-item routerLink="/reservations" (click)="close()">
+    <a mat-list-item routerLink="/reservations" (click)="close()" *ngIf="loggedInUser">
         <mat-icon>schedule</mat-icon>
         <span>Reserve</span>
     </a>
-    <a mat-list-item routerLink="/my-reservations" (click)="close()">
+    <a mat-list-item routerLink="/my-reservations" (click)="close()" *ngIf="loggedInUser">
         <mat-icon>today</mat-icon>
         <span>My reservations</span>
     </a>
