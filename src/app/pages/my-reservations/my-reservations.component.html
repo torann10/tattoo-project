@@ -1,0 +1,20 @@
+<div class="flex-content">
+    <div class="table-container">
+        <table mat-table [dataSource]="reservations" class="mat-elevation-z2">
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                </ng-container>
+            
+            <ng-container matColumnDef="recordedAt">
+                <th mat-header-cell *matHeaderCellDef> Reservation time </th>
+                <td mat-cell *matCellDef="let element" [ngStyle]="{'color': element.recordedAt.toDate() < now ? 'red' : 'inherit'}">
+                    {{element.recordedAt.toDate() | date: 'yyyy-MM-dd HH:mm'}}
+                </td>
+            </ng-container>
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.flex-content {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.table-container {
+    margin-top: 2rem;
+    width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+    .table-container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,28 @@
+<div class="div-card">
+    <h1>Reserve your appointment</h1>
+    <div class="flex-content">
+        <mat-card class="inline-calendar-card">
+            <mat-calendar [dateFilter]="filterDate"
+                (selectedChange)="loadAvailableTimes($event)"
+                [selected]="selectedDate"></mat-calendar>
+        </mat-card>
+        <div class="flex-column-content">
+            <mat-chip-listbox aria-label="availableTimes">
+                <mat-chip-option
+                    *ngFor="let time of availableTimesForSelectedDate" 
+                    [selectable]="time.isAvailable"
+                    (selectionChange)="timeSelectionChanged(time.value, $event)"
+                    [disabled]="!time.isAvailable">
+                    {{ time.value | numberTime }}
+                </mat-chip-option>
+            </mat-chip-listbox>
+            <ng-container *ngIf="selectedTime">
+                <mat-form-field class="desc-input-form-field">
+                    <mat-label>Description:</mat-label>
+                    <textarea matInput class="desc-input" [(ngModel)]="description" placeholder="I'd like to have a new frog tattoo..." [rows]="5"></textarea>
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="reserve()">Reserve</button>
+            </ng-container>
+        </div>
+    </div>
+</div>

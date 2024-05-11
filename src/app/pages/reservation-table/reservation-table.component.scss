@@ -1,0 +1,46 @@
+.inline-calendar-card {
+    width: 33%;
+}
+
+.div-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-content {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.flex-column-content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.desc-input {
+  resize: none;
+}
+
+.desc-input-form-field {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .flex-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .flex-column-content {
+    justify-content: center;
+  }
+
+  .inline-calendar-card, mat-chip-listbox, .desc-input {
+    width: 90%;
+  }
+}
