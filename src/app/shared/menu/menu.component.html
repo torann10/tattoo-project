@@ -3,24 +3,28 @@
         <mat-icon>home</mat-icon>
         <span>Main</span>
     </a>
-    <a mat-list-item routerLink="/reference" (click)="close()">
-        <mat-icon>reviews</mat-icon>
-        <span>Reference</span>
+    <a mat-list-item routerLink="/reservations" (click)="close()">
+        <mat-icon>schedule</mat-icon>
+        <span>Reserve</span>
+    </a>
+    <a mat-list-item routerLink="/my-reservations" (click)="close()">
+        <mat-icon>today</mat-icon>
+        <span>My reservations</span>
     </a>
     <a mat-list-item routerLink="/login" (click)="close()" *ngIf="!loggedInUser">
         <mat-icon>login</mat-icon>
         <span>Login</span>
     </a>
-    <a mat-list-item routerLink="/login" (click)="close(true)" *ngIf="loggedInUser">
-        <mat-icon>logout</mat-icon>
-        <span>Logout</span>
-    </a>
-    <a mat-list-item routerLink="/register" (click)="close()">
+    <a mat-list-item routerLink="/register" (click)="close()" *ngIf="!loggedInUser">
         <mat-icon>app_registration</mat-icon>
         <span>Register</span>
     </a>
     <a mat-list-item routerLink="/care" (click)="close()">
         <mat-icon>info</mat-icon>
         <span>Care</span>
+    </a>
+    <a mat-list-item routerLink="/login" (click)="close(true)" *ngIf="loggedInUser">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
     </a>
 </mat-nav-list>

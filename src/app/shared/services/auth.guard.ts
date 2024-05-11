@@ -6,15 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard {
-  canActivate(
+  canActivateChild(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    
       const user = JSON.parse(localStorage.getItem('user') as string);
-      if (user) {
-        return true;
-      }
-      return false;
+
+      return !!user;
   }
   
 }

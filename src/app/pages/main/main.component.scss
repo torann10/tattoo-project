@@ -1,24 +1,16 @@
-div {
-    display: inline-block;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    align-items: center;
-}
-
 .div-card {
-    padding: 100px;
-    background-color: lightgray;
-    height: 100%;
-}
-
-.main_component {
-    height: 100vh;
+    background-color: lightgray; 
+    height: calc(100vh - 64px);
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-mat-card-header{
+mat-card {
+    margin: 1rem;
+}
+
+mat-card-header {
     text-align: center;
     justify-content: center;
 }

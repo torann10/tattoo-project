@@ -26,13 +26,16 @@ export class AppComponent implements OnInit{
         this.page = currentPage;
       }
     });
-    this.authService.isUserLoggedIn().subscribe(user => {
-      console.log(user);
-      this.loggedInUser = user;
-      localStorage.setItem('user', JSON.stringify(this.loggedInUser));
-    }, error => {
-      console.error(error);
-      localStorage.setItem('user', JSON.stringify('null'));
+    this.authService.isUserLoggedIn().subscribe({
+      next: user => {
+        console.log(user);
+        this.loggedInUser = user;
+        localStorage.setItem('user', JSON.stringify(this.loggedInUser));
+      },
+      error: error => {
+        console.error(error);
+        localStorage.setItem('user', JSON.stringify('null'));
+      }
     });
   }
 

@@ -1,4 +1,4 @@
-html, body { height: 100%; }
+html, body { height: 100%; margin: 0; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .loading-spinner {
@@ -25,4 +25,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0, 0.3);
+}
+
+.mat-mdc-list-item-unscoped-content {
+  display: flex;
+  gap: 0.25rem;
 }

@@ -43,7 +43,7 @@ import { AngularFireModule } from '@angular/fire/compat';
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })
